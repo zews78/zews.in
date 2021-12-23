@@ -1,42 +1,27 @@
 // import { Fragment } from 'react'
-// import {useParams} from "react-router-dom"
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
 import { Switch } from '@headlessui/react'
-import { useContext } from 'react'
-import themeContext from '../../context/themeContext'
-// import themeState from '../../context/themeState'
-import "./navbar.css";
+
 // import logo from "/main_icon.png"
 const navigation = [
   { name: 'Home', href: '#home', current: true },
-  { name: 'About Me', href: '#about', current: false },
-  { name: 'Projects', href: '#projects', current: false },
+  { name: 'About', href: '#about', current: false },
+  { name: 'Projects', href: '#project', current: false },
   { name: 'Contact', href: '#contact', current: false },
 ]
-// const { userparams } = useParams();
-// const queryString = window.location.search;
-
-// console.log(userparams);
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 
-
-
-
+// toggle button for dark mode
 function Toggle() {
-  const a = useContext(themeContext);
-  // console.log(a.mode, "navbart_galsj")
-  const [enabled, setEnabled] = useState(true)
-  enabled ? a.setmode("dark") : a.setmode("light"); 
+  const [enabled, setEnabled] = useState(false)
 
   return (
-    <>
-
     <Switch
       checked={enabled}
       onChange={setEnabled}
@@ -49,7 +34,6 @@ function Toggle() {
           }  py-2 pointer-events-none inline-block h-6 w-6 transform bg-white rounded-full shadow-lg transition ease-in-out duration-200`}
       />
     </Switch>
-    </>
   )
 }
 
@@ -57,11 +41,11 @@ function Toggle() {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-white sticky top-0 z-10 dark:bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div className="relative flex items-center justify-between h-14">
+            <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -77,23 +61,18 @@ export default function Navbar() {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="https://raw.githubusercontent.com/zews78/zews.in/recovery/public/header_icon.png"
+                    src="/title_text2.png"
                     alt="Workflow"
                   />
-                  <div class="flex self-center cursor-pointer">
                   <img
-                    className="hidden lg:block h-6 w-auto self-center"
-                    src="https://raw.githubusercontent.com/zews78/zews.in/recovery/public/header_icon.png"
+                    className="hidden lg:block h-8 w-auto"
+                    src="/main_icon2.png"
                     alt="Workflow"
                   />
-                  <div class="hidden lg:block font-extrabold text-3xl ml-4 dark:text-white" style={{lineHeight:"64%"}}>zews</div>
-
-                  </div>
-
 
                 </div>
                 {/* fix here by defining different classname */}
-                <div className="hidden sm:block sm:ml-6 lg:ml-1/2 navbarItems">
+                <div className="hidden sm:block sm:ml-6" style={{marginLeft:"40rem"}}>
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
@@ -106,7 +85,6 @@ export default function Navbar() {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                        
                       </a>
                     ))}
                     {/* dark/light mode toggle */}
@@ -141,7 +119,6 @@ export default function Navbar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              {/* <div class="px-3 py-2">{Toggle()}</div> */}
             </div>
           </Disclosure.Panel>
         </>

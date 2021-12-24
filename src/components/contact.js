@@ -28,14 +28,18 @@ export default function Contact() {
   const { width } = useViewport();
   // const width = 700;
   const breakpoint = 520;
+
   useEffect(() => {
       AOS.init({
+        disable: function() {
+          return width < breakpoint;
+        },
           duration: 1000
       });
 
-  }, [])
+  }, [width])
   return (
-    <div id="contact" class="h-screen overflow-x-hidden relative dark:bg-gray-900 overflow-hidden"><br /><br /><br/>
+    <div id="contact" class="h-screen relative dark:bg-gray-900"><br /><br /><br/>
 
       <div class="p-2 lg:mx-8 text-yellow-400 lg:text-xl font-bold">Contact.</div>
       <div data-aos={`${(width>breakpoint)? "fade-up" : ""}`} class="px-8 lg:mx-40 my-2 dark:text-white">

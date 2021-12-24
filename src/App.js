@@ -9,7 +9,7 @@ function App() {
   const a = "dark";
 
   return (
-    <div class={a.mode +" containers"}>
+    <div class={a +" containers"}>
       <Navbar />
       <section class="child"><Home /></section>
       <section class="child"><About /></section>

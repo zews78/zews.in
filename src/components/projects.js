@@ -24,6 +24,10 @@ function IndividualProject(i) {
     const breakpoint = 520;
     useEffect(() => {
         AOS.init({
+            // disable: function() {
+
+            //     return width < breakpoint;
+            //   },
             duration: 1000
         });
 

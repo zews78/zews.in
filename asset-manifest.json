@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/zews.in/static/css/main.e9a61cf6.chunk.css",
-    "main.js": "/zews.in/static/js/main.a08e43ca.chunk.js",
-    "main.js.map": "/zews.in/static/js/main.a08e43ca.chunk.js.map",
+    "main.css": "/zews.in/static/css/main.9b0bbdc1.chunk.css",
+    "main.js": "/zews.in/static/js/main.4acd5bbc.chunk.js",
+    "main.js.map": "/zews.in/static/js/main.4acd5bbc.chunk.js.map",
     "runtime-main.js": "/zews.in/static/js/runtime-main.ed1da77e.js",
     "runtime-main.js.map": "/zews.in/static/js/runtime-main.ed1da77e.js.map",
     "static/css/2.cd46e7bc.chunk.css": "/zews.in/static/css/2.cd46e7bc.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.e6bf8d3e.chunk.js.map": "/zews.in/static/js/3.e6bf8d3e.chunk.js.map",
     "index.html": "/zews.in/index.html",
     "static/css/2.cd46e7bc.chunk.css.map": "/zews.in/static/css/2.cd46e7bc.chunk.css.map",
-    "static/css/main.e9a61cf6.chunk.css.map": "/zews.in/static/css/main.e9a61cf6.chunk.css.map",
+    "static/css/main.9b0bbdc1.chunk.css.map": "/zews.in/static/css/main.9b0bbdc1.chunk.css.map",
     "static/js/2.050077bb.chunk.js.LICENSE.txt": "/zews.in/static/js/2.050077bb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ed1da77e.js",
     "static/css/2.cd46e7bc.chunk.css",
     "static/js/2.050077bb.chunk.js",
-    "static/css/main.e9a61cf6.chunk.css",
-    "static/js/main.a08e43ca.chunk.js"
+    "static/css/main.9b0bbdc1.chunk.css",
+    "static/js/main.4acd5bbc.chunk.js"
   ]
 }
